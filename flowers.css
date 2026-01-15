@@ -1,0 +1,86 @@
+/* Pastel Flower Canvas - Fullscreen Black Background */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Fullscreen Canvas */
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    cursor: crosshair;
+}
+
+/* Centered Instruction Text */
+#hint {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(18px, 3.5vw, 32px);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.3px;
+    pointer-events: none;
+    z-index: 10;
+    transition: opacity 0.4s ease;
+}
+
+/* Clean Button - Bottom Right */
+#cleanBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 11px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+    z-index: 20;
+}
+
+#cleanBtn:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+#cleanBtn:active {
+    transform: scale(0.96);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    #cleanBtn {
+        padding: 12px 22px;
+        font-size: 16px;
+    }
+}

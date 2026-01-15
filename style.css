@@ -1202,6 +1202,7 @@ body {
     text-shadow: 0 0 20px rgba(167, 255, 238, 0.5);
     font-weight: 300;
     letter-spacing: 0.1em;
+    text-decoration: none;
 }
 
 @keyframes fadeIn {
